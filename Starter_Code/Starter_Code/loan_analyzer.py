@@ -130,6 +130,7 @@ annual_discount_rate = (20 / 100)
 def calculate_new_present_value(future_value, remaining_months, annual_discount_rate):
     new_present_value = new_loan.get("future_value") / (1 + annual_discount_rate/12) ** new_loan.get("remaining_months")
     print(f"The present value of the loan is: ${new_present_value:.2f}")
+    return new_present_value
 if __name__ == "__main__":
     calculate_new_present_value(1000, 12, 0.2)
 

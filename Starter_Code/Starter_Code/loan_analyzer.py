@@ -82,10 +82,10 @@ print(f"There are {months_info} months remaining and the loan price is ${loan_in
 #   HINT: Present Value = Future Value / (1 + Discount_Rate/12) ** remaining_months
 
 discount_rate = (20 / 100) 
-Present_value =   future_info / (1 + discount_rate/12) ** months_info
-print(f"The present value of the loan is: ${Present_value:.2f}")
+present_value =   future_info / (1 + discount_rate/12) ** months_info
+print(f"The present value of the loan is: ${present_value:.2f}")
 
-fair_value = ((total_costs + Present_value) / (total_loans + 1)) 
+fair_value = ((total_costs + present_value) / (total_loans + 1)) 
 print(f"The fair_value is: ${fair_value:.2f}")
 
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
@@ -93,7 +93,7 @@ print(f"The fair_value is: ${fair_value:.2f}")
 #    If the present value of the loan is greater than or equal to the cost, then print a message that says the loan is worth at least the cost to buy it.
 #    Else, the present value of the loan is less than the loan cost, then print a message that says that the loan is too expensive and not worth the price.
 
-if Present_value >= fair_value:
+if present_value >= fair_value:
     print("The loan is worth acquiring.")
 else:
     print("The loan is not worth acquiring")

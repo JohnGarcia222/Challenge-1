@@ -88,7 +88,7 @@ present_value =   future_info / (1 + discount_rate/12) ** months_info
 print(f"The present value of the loan is: ${present_value:.2f}")
 
 fair_value = ((total_costs + present_value) / (total_loans + 1)) 
-print(f"The fair_value is: ${fair_value:.2f}")
+print(f"The fair value is: ${fair_value:.2f}")
 
 #Not to sure what fair value is supposed to be but run fair value as an average???
 #Fair value = $601? based on average that is
@@ -234,3 +234,5 @@ with open ("inexpenive_loans.csv", mode= "w", newline= "")as csv_file:
 
 #this is hard and was very hard to learn. 
 #loan in loans are the variables inside of the inexpensive loan list. each variable is seperated by {}
+
+

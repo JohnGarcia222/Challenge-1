@@ -36,6 +36,8 @@ print(f"The total cost of loans is: ${total_costs}")
 average_loan_amount = (total_costs / total_loans)
 print(f"The average loan amount is: ${average_loan_amount}")
 
+#grab the loans and the sum and shift to average (max / amount)
+
 """Part 2: Analyze Loan Data.
 
 Analyze the loan to determine the investment evaluation.
@@ -88,6 +90,9 @@ print(f"The present value of the loan is: ${present_value:.2f}")
 fair_value = ((total_costs + present_value) / (total_loans + 1)) 
 print(f"The fair_value is: ${fair_value:.2f}")
 
+#Not to sure what fair value is supposed to be but run fair value as an average???
+#Fair value = $601? based on average that is
+
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
 # @TODO: Write a conditional statement (an if-else statement) to decide if the present value represents the loan's fair value.
 #    If the present value of the loan is greater than or equal to the cost, then print a message that says the loan is worth at least the cost to buy it.
@@ -98,6 +103,7 @@ if present_value >= fair_value:
 else:
     print("The loan is not worth acquiring")
 
+#staright forward, if present value is more its worth if not it is not worth
 
 """Part 3: Perform Financial Calculations.
 
@@ -134,6 +140,10 @@ def calculate_new_present_value(future_value, remaining_months, annual_discount_
 if __name__ == "__main__":
     calculate_new_present_value(1000, 12, 0.2)
 
+
+#use name == main to work the print(was not working before for some reason) 
+#set more values to run the name in main properly
+#how to put a decimal in the variable without math??
 
 """Part 4: Conditionally filter lists of loans.
 
@@ -188,6 +198,8 @@ for loan in loans:
 
 print(inexpensive_loans)
 
+#make a list, run an if else, print the list.
+#cant use same names twice in the same line of code
 
 """Part 5: Save the results.
 
@@ -217,3 +229,8 @@ with open ("inexpenive_loans.csv", mode= "w", newline= "")as csv_file:
     writer.writeheader()
     for loan in inexpensive_loans:
         writer.writerow(loan)
+
+
+
+#this is hard and was very hard to learn. 
+#loan in loans are the variables inside of the inexpensive loan list. each variable is seperated by {}
